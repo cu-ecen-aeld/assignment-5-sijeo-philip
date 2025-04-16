@@ -6,7 +6,7 @@
 case "$1" in
 	start)
 		echo "S98Modules Start... "
-		cd /lib/modules/$(uname -r)/updates
+		cd /lib/modules/$(uname -r)/extra
 		scull_load
 		echo "Loading Scull..."
 		module_load faulty
@@ -16,7 +16,7 @@ case "$1" in
 		;;
 	stop)
 		echo "S98Modules Stop...."
-		cd /lib/modules/$(uname -r)/updates
+		cd /lib/modules/$(uname -r)/extra
 		scull_unload
 		echo "Unloading Scull..."
 		module_unload faulty
